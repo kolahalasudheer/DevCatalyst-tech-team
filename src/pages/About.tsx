@@ -30,7 +30,7 @@ const About = () => {
     <section id="about" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-[#00d4ff] bg-clip-text text-transparent">
-          About Dev Catalyst
+          About DevCatalyst
         </h2>
 
         {data && (
@@ -63,16 +63,7 @@ const About = () => {
         {data && (
           <>
             <div className="mt-16">
-              <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center">Domains</h3>
-              <div className="flex flex-wrap gap-3 justify-center">
-                {data.domains.map((d, i) => (
-                  <span key={i} className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300">{d}</span>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-16">
-              <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center">Leadership</h3>
+              <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center">Meet Our Team</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
                 {data.leadership.map((m, i) => (
                   <div key={i} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center hover:-translate-y-2 transition-all">
@@ -85,7 +76,7 @@ const About = () => {
             </div>
 
             <div className="mt-16">
-              <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center">Teams</h3>
+              <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center"></h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {data.teams.map((t, i) => (
                   <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6">
