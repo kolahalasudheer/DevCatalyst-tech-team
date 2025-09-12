@@ -11,36 +11,67 @@
     {
       "name": "Technical Team",
       "members": [
-        { "name": "Neha Sharma", "role": "Frontend", "avatar": "NS" },
-        { "name": "Aarav Mehta", "role": "Backend", "avatar": "AM" }
+        { "name": "Hemaditya Kalakota", "avatar": "HK" },
+        { "name": "Sanjay Samala", "avatar": "SS" },
+        { "name": "Sudheer Kumar", "avatar": "SK" },
+        { "name": "Hema", "avatar": "H" },
+        { "name": "Siddhardha MNS", "avatar": "SM" },
+        { "name": "Ajjarapu Pranav Sai Sreekanta", "avatar": "AP" },
+        { "name": "Bavana Narvaneni", "avatar": "BN" }
       ]
     },
     {
       "name": "Event Planning Team",
       "members": [
-        { "name": "Ishita Rao", "role": "ML Engineer", "avatar": "IR" },
-        { "name": "Karan Verma", "role": "Data Engineer", "avatar": "KV" }
+        { "name": "Parimitha", "avatar": "P" },
+        { "name": "Siddhardha", "avatar": "S" },
+        { "name": "Ch.Bhuvana Sri", "avatar": "BS" },
+        { "name": "Esha Satvase", "avatar": "ES" },
+        { "name": "Vishnu Nimmakayala", "avatar": "VN" },
+        { "name": "Hasini", "avatar": "H" },
+        { "name": "Sai Karthikeyan Koduri", "avatar": "KK" },
+        { "name": "Ajjarapu Pranav Sai Sreekanta", "avatar": "AP" },
+        { "name": "Raj Likhit Jasthi", "avatar": "RL" },
+        { "name": "Srikar", "avatar": "S" },
+        { "name": "Supratik Peta", "avatar": "SP" },
+        { "name": "Bavana Narvaneni", "avatar": "BN" },
+        { "name": "Vinuthna Athimamula", "avatar": "VA" },
+        { "name": "Akshara", "avatar": "A" },
+        { "name": "Hema", "avatar": "H" },
+        { "name": "Kranthi Kodati", "avatar": "KK" }
       ]
     },
     {
       "name": "Social Media Team",
       "members": [
-        { "name": "Neha Sharma", "role": "Frontend", "avatar": "NS" },
-        { "name": "Aarav Mehta", "role": "Backend", "avatar": "AM" }
+        { "name": "Ch.Bhuvana Sri", "avatar": "BS" },
+        { "name": "Supratik Peta", "avatar": "SP" },
+        { "name": "Vishnu Nimmakayala", "avatar": "VN" },
+        { "name": "Akshara", "avatar": "A" },
+        { "name": "Kranthi Kodati", "avatar": "KK" },
+        { "name": "P Ajay Kumar", "avatar": "AK" }
       ]
     },
     {
       "name": "Outreach Team",
       "members": [
-        { "name": "Neha Sharma", "role": "Frontend", "avatar": "NS" },
-        { "name": "Aarav Mehta", "role": "Backend", "avatar": "AM" }
+        { "name": "Hemaditya Kalakota", "avatar": "HK" },
+        { "name": "Vinuthna Athimamula", "avatar": "VA" },
+        { "name": "Sai Karthikeyan Koduri", "avatar": "KK" },
+        { "name": "Hasini", "avatar": "H" },
+        { "name": "Esha Satvase", "avatar": "ES" },
+        { "name": "Srikar", "avatar": "S" }
       ]
     },
     {
       "name": "Vision Makers",
       "members": [
-        { "name": "Neha Sharma", "role": "Frontend", "avatar": "NS" },
-        { "name": "Aarav Mehta", "role": "Backend", "avatar": "AM" }
+        { "name": "P Ajay Kumar", "avatar": "AK" },
+        { "name": "Sanjay Samala", "avatar": "SS" },
+        { "name": "Sruthi", "avatar": "S" },
+        { "name": "Esha Satvase", "avatar": "ES" },
+        { "name": "Mohammad Zaid", "avatar": "MZ" },
+        { "name": "Kattamreddy Sai", "avatar": "SC" }
       ]
     }
   ]

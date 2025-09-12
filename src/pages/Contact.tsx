@@ -57,10 +57,9 @@ const Contact = () => {
 
       <footer className="mt-32 text-center">
         <div className="flex justify-center gap-8 mb-8">
-          <a href="#" className="text-2xl text-gray-400 hover:text-[#00d4ff] hover:-translate-y-1 transition-all duration-300">📧</a>
-          <a href="#" className="text-2xl text-gray-400 hover:text-[#00d4ff] hover:-translate-y-1 transition-all duration-300">💬</a>
-          <a href="#" className="text-2xl text-gray-400 hover:text-[#00d4ff] hover:-translate-y-1 transition-all duration-300">🔗</a>
-          <a href="#" className="text-2xl text-gray-400 hover:text-[#00d4ff] hover:-translate-y-1 transition-all duration-300">📸</a>
+          <a href="mailto:devcatalyst.2025@gmail.com" className="text-2xl text-gray-400 hover:text-[#00d4ff] hover:-translate-y-1 transition-all duration-300">📧</a>
+          <a href="https://beacons.ai/devcatalyst" className="text-2xl text-gray-400 hover:text-[#00d4ff] hover:-translate-y-1 transition-all duration-300">🔗</a>
+          <a href="/Gallery" className="text-2xl text-gray-400 hover:text-[#00d4ff] hover:-translate-y-1 transition-all duration-300">📸</a>
         </div>
         <p className="text-gray-500">&copy; 2025 Dev Catalyst. All rights reserved.</p>
       </footer>

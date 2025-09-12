@@ -35,10 +35,10 @@ const Navbar = () => {
             Resources
             <span className="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-gradient-to-r from-[#00d4ff] to-[#9c40ff] transition-all duration-300 group-hover:w-full"></span>
           </NavLink></li>
-          <li><a href="/contact" className="text-white hover:text-[#00d4ff] transition-colors relative group">
+          <li><NavLink to="/contact" className="text-white hover:text-[#00d4ff] transition-colors relative group">
             Contact
             <span className="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-gradient-to-r from-[#00d4ff] to-[#9c40ff] transition-all duration-300 group-hover:w-full"></span>
-          </a></li>
+          </NavLink></li>
           <li>
             <Link to="/join" className="ml-4 px-4 py-2 rounded-md bg-white/10 border border-white/10 text-white hover:bg-white/15 transition-colors">
               Join Us

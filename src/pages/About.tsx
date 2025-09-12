@@ -13,7 +13,7 @@ type TeamData = {
 
 const About = () => {
   const [data, setData] = useState(null as TeamData | null)
-  const [open, setOpen] = useState({} as Record<string, boolean>)
+  const [openTeam, setOpenTeam] = useState(null as string | null)
 
   useEffect(() => {
     let cancelled = false
@@ -24,7 +24,7 @@ const About = () => {
     return () => { cancelled = true }
   }, [])
 
-  const toggleTeam = (name: string) => setOpen((prev: Record<string, boolean>) => ({ ...prev, [name]: !prev[name] }))
+  const toggleTeam = (name: string) => setOpenTeam((prev: string | null) => prev === name ? null : name)
 
   return (
     <section id="about" className="py-20 px-4">
@@ -76,31 +76,33 @@ const About = () => {
             </div>
 
             <div className="mt-16">
-              <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center"></h3>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {data.teams.map((t: TeamGroup, i: number) => (
-                  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                    <button onClick={() => toggleTeam(t.name)} className="w-full text-left">
-                      <div className="flex items-center justify-between">
-                        <div className="text-white font-semibold">{t.name}</div>
-                        <div className="text-[#00d4ff] text-sm">{open[t.name] ? 'Hide' : 'Show'}</div>
-                      </div>
-                    </button>
-                    {open[t.name] && (
-                      <ul className="mt-4 space-y-3">
-                        {t.members.map((m, j) => (
-                          <li key={j} className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#9c40ff] flex items-center justify-center text-[12px] font-bold text-white">
-                              {(m.avatar || m.name.split(' ').map(w=>w[0]).slice(0,2).join(''))}
-                            </div>
-                            <div className="text-gray-200">{m.name}{m.role ? ` — ${m.role}` : ''}</div>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center">Representatives</h3>
+              {Array.from({ length: Math.ceil(data.teams.length / 3) }).map((_, rowIdx) => (
+                <div key={rowIdx} className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 items-start mb-6">
+                  {data.teams.slice(rowIdx * 3, rowIdx * 3 + 3).map((t: TeamGroup, i: number) => (
+                    <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-4 min-h-[80px] flex flex-col">
+                      <button onClick={() => toggleTeam(t.name)} className="w-full text-left">
+                        <div className="flex items-center justify-between">
+                          <div className="text-white font-semibold text-base truncate max-w-[70%]" title={t.name}>{t.name}</div>
+                          <div className="text-[#00d4ff] text-sm">{openTeam === t.name ? 'Hide' : 'Show'}</div>
+                        </div>
+                      </button>
+                      {openTeam === t.name && (
+                        <ul className="mt-4 space-y-3">
+                          {t.members.map((m, j) => (
+                            <li key={j} className="flex items-center gap-3">
+                              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#9c40ff] flex items-center justify-center text-[12px] font-bold text-white">
+                                {(m.avatar || m.name.split(' ').map(w=>w[0]).slice(0,2).join(''))}
+                              </div>
+                              <div className="text-gray-200">{m.name}{m.role ? ` — ${m.role}` : ''}</div>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           </>
         )}
