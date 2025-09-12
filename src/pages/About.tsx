@@ -12,8 +12,8 @@ type TeamData = {
 }
 
 const About = () => {
-  const [data, setData] = useState<TeamData | null>(null)
-  const [open, setOpen] = useState<Record<string, boolean>>({})
+  const [data, setData] = useState(null as TeamData | null)
+  const [open, setOpen] = useState({} as Record<string, boolean>)
 
   useEffect(() => {
     let cancelled = false
@@ -24,7 +24,7 @@ const About = () => {
     return () => { cancelled = true }
   }, [])
 
-  const toggleTeam = (name: string) => setOpen(prev => ({ ...prev, [name]: !prev[name] }))
+  const toggleTeam = (name: string) => setOpen((prev: Record<string, boolean>) => ({ ...prev, [name]: !prev[name] }))
 
   return (
     <section id="about" className="py-20 px-4">
@@ -65,7 +65,7 @@ const About = () => {
             <div className="mt-16">
               <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center">Meet Our Team</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-                {data.leadership.map((m, i) => (
+                {data.leadership.map((m: Leadership, i: number) => (
                   <div key={i} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center hover:-translate-y-2 transition-all">
                     <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#9c40ff] flex items-center justify-center text-xl font-bold text-white">{m.avatar || m.name.split(' ').map(w=>w[0]).slice(0,2).join('')}</div>
                     <div className="text-white font-semibold">{m.name}</div>
@@ -78,7 +78,7 @@ const About = () => {
             <div className="mt-16">
               <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center"></h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {data.teams.map((t, i) => (
+                {data.teams.map((t: TeamGroup, i: number) => (
                   <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6">
                     <button onClick={() => toggleTeam(t.name)} className="w-full text-left">
                       <div className="flex items-center justify-between">
