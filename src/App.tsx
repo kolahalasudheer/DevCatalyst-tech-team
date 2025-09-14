@@ -9,6 +9,7 @@ import Team from './pages/Team'
 import Gallery from './pages/Gallery'
 import Join from './pages/Join'
 import EventDetail from './pages/EventDetail'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/resources" element={<Resources />} />
             <Route path="/team" element={<Team />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/join" element={<Join />} />
           </Routes>
         </div>
